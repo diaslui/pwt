@@ -24,6 +24,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     MonaSans: require('../assets/fonts/MonaSans-Regular.ttf'),
+    MonaSansBold: require('../assets/fonts/MonaSans-Bold.ttf'),
     ...FontAwesome.font,
   });
 
