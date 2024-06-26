@@ -7,7 +7,7 @@ import { Button } from './Buttons';
 export const NotFoundItens = () => {
     return(
         <View style={styles.container}>
-            <MonoTextBold colorPattern='warn'  style={styles.title}>Sua carteira está vazia</MonoTextBold>
+            <MonoTextBold colorPattern='main3'  style={styles.title}>Sua carteira está vazia</MonoTextBold>
             <MonoText colorPattern='text' style={styles.infoText}>Ao adicionar itens eles aparecerão aqui</MonoText>
             <Button btnType='primary' text='Começar a Adicionar'/>
         </View>

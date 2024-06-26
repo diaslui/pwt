@@ -2,41 +2,34 @@ import { Pressable } from "react-native";
 import { Text } from "./Themed";
 import { MonoTextBold } from "./StyledText";
 import { getColorValue, ColorPalleType } from "@/constants/Colors";
+import { useColorScheme } from "@/components/useColorScheme";
+import {MaterialIcons} from "@expo/vector-icons";
 
-type btnType =
-  | "primary"
-  | "secondary"
-  | "warn"
-  | "danger"
-  | "success"
-  | "info"
-  | "light"
-  | "dark"
-  | "text"
-  | "main1"
-  | "main2"
-  | "main3";
+
 
 interface props {
   text: string;
-  btnType: btnType;
+  backgroundColor?: keyof ColorPalleType;
+  borderColor?: keyof ColorPalleType;
+  shadowColor?: keyof ColorPalleType;
   icon?: string;
 }
 
 export const Button = (props: props) => {
+  const colorScheme = useColorScheme() || "light";
   return (
     <Pressable
     style={({ pressed }) => [
         {
-          backgroundColor: getColorValue('main1'),
+          backgroundColor: props.backgroundColor ? getColorValue(props.backgroundColor) : getColorValue('main1'),
           paddingHorizontal: 29,
           paddingVertical: 13,
           borderRadius: 17,
-          borderWidth: 1.7,
-          borderColor: getColorValue('mainLight1'),
+          borderWidth: 1.2,
+          borderColor: props.borderColor ? getColorValue(props.borderColor) : getColorValue('main1'),
           alignItems: 'center',
           justifyContent: 'center',
-          shadowColor: getColorValue('MainDark1'),
+          shadowColor: props.shadowColor ? getColorValue(props.shadowColor) : getColorValue('main1'),
           shadowOffset: { width: 5, height: 5 },
           shadowOpacity: 0.25,
           shadowRadius: 3.84,
@@ -51,7 +44,7 @@ export const Button = (props: props) => {
         style={{
           fontSize: 19,
         }}
-        colorPattern="background"
+        colorPattern={colorScheme == "dark" ? "text" : "background"}
       >
         {props.text}
       </MonoTextBold>

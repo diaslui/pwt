@@ -14,6 +14,12 @@ import { StyleSheet } from 'react-native';
       height: 1,
       width: '80%',
     },
+    background: {
+      flex: 1,
+      resizeMode: "cover",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   });
 
 export { styles };

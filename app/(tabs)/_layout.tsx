@@ -3,9 +3,11 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
 import {AwesomeIcon} from "@/components/Icons";
-import Colors from '@/constants/Colors';
+import Colors, {getColorValue, ColorPalleType} from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import {MonoTextBold } from "@/components/StyledText";
+
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 
@@ -25,10 +27,14 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Minha Carteira',
-          tabBarIcon: ({ color }) => <AwesomeIcon name="paperclip" color={color} />,
+          tabBarActiveTintColor: getColorValue("main2"),
+          tabBarLabelPosition: 'beside-icon',
+          tabBarAllowFontScaling: true,
+          tabBarIcon: ({ color }) => <AwesomeIcon name="wallet" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
+                
                 {({ pressed }) => (
                   <FontAwesome
                     name="info-circle"
@@ -37,7 +43,9 @@ export default function TabLayout() {
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
                   />
                 )}
+                              
               </Pressable>
+
             </Link>
           ),
         }}
@@ -46,7 +54,9 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: 'Configurações',
-          tabBarIcon: ({ color }) => <AwesomeIcon name="gear" color={color} />,
+          tabBarLabelPosition: 'beside-icon',
+          tabBarActiveTintColor: getColorValue("main3"), 
+          tabBarIcon: ({ color }: { color: string }) => <AwesomeIcon name="settings" color={color} />,
         }}
       />
     </Tabs>

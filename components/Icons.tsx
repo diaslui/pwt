@@ -1,8 +1,8 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { MaterialIcons } from "@expo/vector-icons";
 
 export function AwesomeIcon(props: {
-    name: React.ComponentProps<typeof FontAwesome>['name'];
+    name: React.ComponentProps<typeof MaterialIcons>['name'];
     color: string;
   }) {
-    return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+    return <MaterialIcons size={28} style={{ marginBottom: -3 }} {...props} />;
   }
