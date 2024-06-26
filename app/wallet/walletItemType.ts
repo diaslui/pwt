@@ -1,3 +1,5 @@
+export type walletItemFileType = "image" | "pdf" | "doc" | "xls" | "ppt" | "txt" | "zip" | "other";
+
 export type itemWalletType =
    "Carteira de identidade (RG)"
   | "Cadastro de Pessoas Físicas (Cpf)"
@@ -23,4 +25,11 @@ export type itemWalletType =
   | "Cartão de Benefício"
   | "Cartão de Plano de Saúde"
   | "Carteirinha do Estudante"
-  | "Carteirinha de Associado";
+  | "Carteirinha de Associado"
+  | "Anotação"
+  | "Outro"
+  | "Atestado Médico"
+  | "Receita Médica"
+  | "Exame Médico"
+  | "Receita de Medicamento"
+  ;

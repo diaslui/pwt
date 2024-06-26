@@ -1,4 +1,4 @@
-import { itemWalletType  } from "./walletItemType";
+import { itemWalletType,walletItemFileType  } from "./walletItemType";
 interface Wallet {
     name?: string;
     currency: string;
@@ -10,5 +10,6 @@ interface WalletItem {
     name: string;
     description?: string;
     date: Date;
+    filesType: walletItemFileType[];
     type: itemWalletType | string; // string for custom types
 }
