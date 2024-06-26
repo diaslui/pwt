@@ -13,6 +13,18 @@ type MainColorPallet = {
   main3: string;
 };
 
+type MainLightColorPallet = {
+  mainLight1: string;
+  mainLight2: string;
+  mainLight3: string;
+};
+
+type MainDarkColorPallet = {
+  MainDark1: string;
+  MainDark2: string;
+  MainDark3: string;
+};
+
 type actionColors = {
   error: string;
   warn: string;
@@ -29,7 +41,7 @@ export type ColorPalleType = {
   warn: string;
   success: string;
 } & MainColorPallet &
-  actionColors;
+  actionColors & MainLightColorPallet  & MainDarkColorPallet;
 
 type Colors = {
   light: ColorPalleType;
@@ -47,8 +59,20 @@ const tintColorDark = "#fff";
 
 const mainColor: MainColorPallet = {
   main1: "#641EE8",
-  main2: "#F5F5F5",
-  main3: "#E5E5E5",
+  main2: "#0094ED",
+  main3: "#FF327C",
+};
+
+const mainColorDark: MainDarkColorPallet = {
+  MainDark1: "#3C0D5C",
+  MainDark2: "#0066A3",
+  MainDark3: "#CC1952",
+};
+
+const mainColorLight: MainLightColorPallet = {
+  mainLight1: "#B39DDB",
+  mainLight2: "#90CAF9",
+  mainLight3: "#F48FB1",
 };
 
 const actionColorsLight: actionColors = {
@@ -69,6 +93,8 @@ const colors: Colors = {
     background: "#fff",
     tint: tintColorLight,
     ...mainColor,
+    ...mainColorLight,
+    ...mainColorDark,
     ...actionColorsLight,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorLight,
@@ -78,7 +104,9 @@ const colors: Colors = {
     background: "#000",
     tint: tintColorDark,
     ...mainColor,
+    ...mainColorLight,
     ...actionColorsDark,
+    ...mainColorDark,
     tabIconDefault: "#ccc",
     tabIconSelected: tintColorDark,
   },

@@ -1,5 +1,5 @@
 import {styles} from "./styles/index"
-import { NotFoundItens } from "@/components/notFoundItens";
+import { NotFoundItens } from "@/components/NotFoundItens";
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
 

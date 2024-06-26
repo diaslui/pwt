@@ -2,18 +2,13 @@ import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
-
+import {AwesomeIcon} from "@/components/Icons";
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -30,7 +25,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Minha Carteira',
-          tabBarIcon: ({ color }) => <TabBarIcon name="paperclip" color={color} />,
+          tabBarIcon: ({ color }) => <AwesomeIcon name="paperclip" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -51,7 +46,7 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: 'Configurações',
-          tabBarIcon: ({ color }) => <TabBarIcon name="gear" color={color} />,
+          tabBarIcon: ({ color }) => <AwesomeIcon name="gear" color={color} />,
         }}
       />
     </Tabs>
