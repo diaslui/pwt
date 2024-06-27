@@ -31,23 +31,6 @@ export default function TabLayout() {
           tabBarLabelPosition: 'beside-icon',
           tabBarAllowFontScaling: true,
           tabBarIcon: ({ color }) => <AwesomeIcon name="wallet" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-                              
-              </Pressable>
-
-            </Link>
-          ),
         }}
       />
       <Tabs.Screen
