@@ -1,6 +1,6 @@
 /** config.ts 
- * © 2024 Personal Wallet By Pedro Luis Dias (github.com/luiisp)
- * --> https://github.com/luiisp/pwt <--
+ * © 2024 Personal Wallet By Pedro Luis Dias (github.com/diaslui)
+ * --> https://github.com/diaslui/pwt <--
  * All App Configs
  */
 export const MaxPinTries = 3;

@@ -2,8 +2,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Pin } from './intertypes';
 
 /** @user_pin 
- * © Personal Wallet By Pedro Luis Dias (github.com/luiisp)
- * --> https://github.com/luiisp/pwt <--
+ * © Personal Wallet By Pedro Luis Dias (github.com/diaslui)
+ * --> https://github.com/diaslui/pwt <--
  * Pin Storage (for acess)
  * VALS: get, store, remove 
  */

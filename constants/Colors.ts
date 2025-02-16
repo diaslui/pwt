@@ -1,6 +1,6 @@
 import { useColorScheme } from "@/components/useColorScheme";
 
-/** @personal wallet -> https://github.com/luiisp/pwt
+/** @personal wallet -> https://github.com/diaslui/pwt
  * Color Pallet types
  *
  * (main,actions || *) ---> ColorPallet
